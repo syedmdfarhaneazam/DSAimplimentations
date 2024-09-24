@@ -12,7 +12,14 @@ public class treeUse{
         //traversal.preOrder(root);
         //System.out.println("POSTORDER");
         //traversal.postOrder(root);
-        /******HEIGHT****** */
+        //*****Traversal Orders****/
+        traversal.levelOrder(root);
+        System.out.println();
+        traversal.leftView(root);
+        System.out.println();
+        traversal.rightView(root);
+        System.out.println();
+        /******HEIGHT*********/
         System.out.println(Tree.height(root));
         /******SIZE***** */
         System.out.println(Tree.size(root));
