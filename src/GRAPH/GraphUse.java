@@ -35,6 +35,9 @@ public class GraphUse { // here we are gonna use everything we created in this p
             }
             System.out.println();
         }
+
+        // TRAVERSALS
+        traversal.bfs(graph, 4);
         sc.close();
     }
 }
