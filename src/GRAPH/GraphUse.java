@@ -39,6 +39,7 @@ public class GraphUse { // here we are gonna use everything we created in this p
         // TRAVERSALS
         traversal.bfs(graph, 4);
         traversal.dfs(graph, 4);
+        traversal.topoSort(graph);
         sc.close();
     }
 }

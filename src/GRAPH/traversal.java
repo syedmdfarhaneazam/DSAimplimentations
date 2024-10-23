@@ -51,4 +51,23 @@ public class traversal { // traversal class that contains all type of traversals
             }
         }
     }
+
+    /**************** TOPOLOGICAL SORTING **********************/
+    public static void topoSort(ArrayList<Edge>[] g) {
+        String s = " ";
+        HashSet<Integer> vis = new HashSet<>();
+        for (int i = 0; i < g.length; i++)
+            if (!vis.contains(i))
+                s = topohelp(g, vis, i, s);
+        System.out.println("The Topological Sort Is - >" + s);
+    }
+
+    private static String topohelp(ArrayList<Edge>[] g, HashSet<Integer> vis, int curr, String s) {
+        vis.add(curr);
+        for (Edge a : g[curr]) {
+            if (!vis.contains(a.dest))
+                s = topohelp(g, vis, a.dest, s);
+        }
+        return curr + " " + s;
+    }
 }
